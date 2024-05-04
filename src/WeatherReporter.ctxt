@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=WeatherReporter
+comment0.text=\r\n\ WeatherReporter\r\n\ Analyses\ weather\ data\ from\ files\ of\ weather-station\ measurements.\r\n\r\n\ The\ weather\ data\ files\ consist\ of\ a\ set\ of\ measurements\ from\ weather\ stations\ around\r\n\ New\ Zealand\ at\ a\ series\ of\ date/time\ stamps.\r\n\ For\ each\ date/time,\ the\ file\ has\:\r\n\ \ A\ line\ with\ the\ date\ and\ time\ (four\ integers\ for\ day,\ month,\ year,\ and\ time)\r\n\ \ \ eg\ "24\ 01\ 2021\ 1900"\ \ for\ 24\ Jan\ 2021\ at\ 19\:00\ \r\n\ \ A\ line\ with\ the\ number\ of\ weather-stations\ for\ that\ date/time\ \r\n\ \ Followed\ by\ a\ line\ of\ data\ for\ each\ weather\ station\:\r\n\ \ \ -\ name\:\ one\ token,\ eg\ "Cape-Reinga"\r\n\ \ \ -\ (x,\ y)\ coordinates\ on\ the\ map\:\ two\ numbers,\ eg\ \ \ 186\ 38\r\n\ \ \ -\ four\ numbers\ for\ temperature,\ dew-point,\ suface-pressure,\ and\ sea-level-pressure\r\n\ Some\ of\ the\ data\ files\ (eg\ weather1-hot.txt,\ and\ weather1-cold.txt)\ have\ data\ for\ just\ one\ date/time.\r\n\ The\ weather-all.txt\ has\ data\ for\ lots\ of\ times.\ The\ date/times\ are\ all\ in\ order.\r\n\ You\ should\ look\ at\ the\ files\ before\ trying\ to\ complete\ the\ methods\ below.\r\n\r\n\ Note,\ the\ data\ files\ were\ extracted\ from\ MetOffice\ weather\ data\ from\ 24-26\ January\ 2021\r\n
+comment1.params=
+comment1.target=void\ plotTemperatures()
+comment1.text=\r\n\ Plots\ the\ temperatures\ for\ one\ date/time\ from\ a\ file\ on\ a\ map\ of\ NZ\r\n\ Asks\ for\ the\ name\ of\ the\ file\ and\ opens\ a\ Scanner\r\n\ A\ good\ design\ is\ to\ call\ plotSnapshot,\ passing\ the\ Scanner\ as\ an\ argument.\r\n
+comment2.params=sc
+comment2.target=void\ plotSnapshot(java.util.Scanner)
+comment2.text=\r\n\ \ Plot\ the\ temperatures\ for\ the\ next\ snapshot\ in\ the\ file\ by\ drawing\r\n\ \ \ a\ filled\ coloured\ circle\ (size\ DIAM)\ at\ each\ weather-station\ location.\r\n\ \ The\ colour\ of\ the\ circle\ should\ indicate\ the\ temperature.\r\n\r\n\ \ The\ method\ should\r\n\ \ \ -\ read\ the\ date/time\ and\ draw\ the\ date/time\ at\ the\ top-left\ of\ the\ map.\r\n\ \ \ -\ read\ the\ number\ of\ stations,\ then\r\n\ \ \ -\ for\ each\ station,\r\n\ \ \ \ \ -\ read\ the\ name,\ coordinates,\ and\ data,\ and\r\n\ \ \ \ \ -\ plot\ the\ temperature\ for\ that\ station.\ \r\n\ \ \ (Hint\:\ You\ will\ find\ the\ getTemperatureColor(...)\ method\ useful.)\r\n\r\n\ \ Also\ finds\ the\ highest\ and\ lowest\ temperatures\ at\ that\ time,\ and\r\n\ \ plots\ them\ with\ a\ larger\ circle.\r\n\ \ (Hint\:\ If\ more\ than\ one\ station\ has\ the\ highest\ (or\ coolest)\ temperature,\r\n\ \ \ \ \ \ \ \ \ you\ only\ need\ to\ draw\ a\ larger\ circle\ for\ one\ of\ them.\r\n
+comment3.params=
+comment3.target=void\ animateTemperatures()
+comment3.text=\ \ \ CHALLENGE\r\n\ DO\ NOT\ DO\ THIS\ IF\ YOU\ HAVE\ NOT\ DONE\ THE\ PREVIOUS\ METHODS\r\n\r\n\ Displays\ an\ animated\ view\ of\ the\ temperatures\ over\ all\r\n\ the\ times\ in\ a\ weather\ data\ files,\ plotting\ the\ temperatures\r\n\ for\ the\ first\ date/time,\ as\ in\ the\ completion,\ pausing\ for\ half\ a\ second,\r\n\ then\ plotting\ the\ temperatures\ for\ the\ second\ date/time,\ and\r\n\ repeating\ until\ all\ the\ data\ in\ the\ file\ has\ been\ shown.\r\n\ \r\n\ (Hint,\ use\ the\ plotSnapshot(...)\ method)\r\n
+comment4.params=temp
+comment4.target=java.awt.Color\ getTemperatureColor(double)
+comment4.text=\r\n\ Returns\ a\ color\ representing\ that\ temperature\r\n\ The\ colors\ are\ increasingly\ blue\ below\ 15\ degrees,\ and\r\n\ increasingly\ red\ above\ 15\ degrees.\r\n
+comment5.params=
+comment5.target=void\ setupGUI()
+comment5.text=\r\n\ Setup\ the\ interface\ with\ buttons\r\n
+comment6.params=arguments
+comment6.target=void\ main(java.lang.String[])
+comment6.text=\r\n\ \ Main\:\ Create\ object\ and\ call\ setupGUI\ on\ it\r\n
+numComments=7
